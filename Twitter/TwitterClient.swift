@@ -24,6 +24,32 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
+    func statuses(_ screename: String, success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
+        get("1.1/statuses/user_timeline/\(screename).json", parameters: nil, progress: nil,
+            success: { (task: URLSessionDataTask?, response: Any?) in
+                let dictionaries = response as! [NSDictionary]
+                let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+                success(tweets)
+        },
+            failure: { (task: URLSessionDataTask?, error: Error?) in
+                
+                failure((error)!)
+        })
+    }
+    
+    func mentions(success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
+        get("1.1/statuses/mentions_timeline.json", parameters: nil, progress: nil,
+            success: { (task: URLSessionDataTask?, response: Any?) in
+                let dictionaries = response as! [NSDictionary]
+                let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+                success(tweets)
+        },
+            failure: { (task: URLSessionDataTask?, error: Error?) in
+                
+                failure((error)!)
+        })
+    }
+    
     func currentAccount(success: @escaping (User) -> (), failure: @escaping (Error) -> ()) {
         get("1.1/account/verify_credentials.json", parameters: nil, progress: nil,
             success: { (task: URLSessionDataTask?, response: Any?) in

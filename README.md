@@ -1,19 +1,19 @@
 # Project 4 - Twitter Redux
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] Hamburger menu
-   - [ ] Dragging anywhere in the view should reveal the menu.
-   - [ ] The menu should include links to your profile, the home timeline, and the mentions view.
-   - [ ] The menu can look similar to the example or feel free to take liberty with the UI.
-- [ ] Profile page
+- [x] Hamburger menu
+   - [x] Dragging anywhere in the view should reveal the menu.
+   - [x] The menu should include links to your profile, the home timeline, and the mentions view.
+   - [x] The menu can look similar to the example or feel free to take liberty with the UI.
+- [x] Profile page
    - [ ] Contains the user header view
-   - [ ] Contains a section with the users basic stats: # tweets, # following, # followers
-- [ ] Home Timeline
+   - [x] Contains a section with the users basic stats: # tweets, # following, # followers
+- [x] Home Timeline
    - [ ] Tapping on a user image should bring up that user's profile page
 
 The following **optional** features are implemented:
@@ -35,15 +35,13 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-  1.
-  2.
 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://cloud.githubusercontent.com/assets/137799/25324570/67971a0a-287b-11e7-9ce7-dad58d9ced72.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

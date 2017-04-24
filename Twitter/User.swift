@@ -15,6 +15,9 @@ class User: NSObject {
     var profileUrl: URL?
     var tagLine: String?
     var dictionary: NSDictionary?
+    var numberOfTweets: Int?
+    var numberOfFriends: Int?
+    var numberOfFollowers: Int?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -28,6 +31,10 @@ class User: NSObject {
         }
         
         tagLine = dictionary["description"] as? String
+        
+        numberOfTweets = dictionary["statuses_count"] as? Int
+        numberOfFriends = dictionary["friends_count"] as? Int
+        numberOfFollowers = dictionary["followers_count"] as? Int
     }
     
     static let userDidLogoutNotification = "UserDidLogout"
